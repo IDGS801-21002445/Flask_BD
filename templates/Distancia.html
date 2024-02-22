@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block conteiner %}
+{% import "_macrosD.html" as macros %}
+    <h1>Distancia entre dos puntos !!</h1>
+    <title>Distancia</title>
+    <form action="" method="POST" novalidate>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.x1,class="form-control")}}
+            </div>
+        </div>
+       
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.x2,class="form-control")}}
+            </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.y1,class="form-control")}}
+            </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group control">
+                {{macros.camposNuevos(form.y2,class="form-control")}}
+            </div>
+        </div>
+       <h1>La distancia es de: {{d}}</h1>
+
+        <input type="submit" id="btn1" value="Calcular">
+    </form>
+
+   <table>
+    <th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </th>
+   </table>
+    
+{% endblock %}

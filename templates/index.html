@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1> Operaciones Básicas </h1>
+<form action="/resultado" method="POST">
+    <label> N1: </label>
+    <input type = "text" name = "n1"><br>
+    <label> N2: </label>
+    <input type = "text" name = "n2"><br>
+    <input type="radio" name="suma" id="suma" style="margin-right: 5px;"/> Suma<br>
+    <input type="radio" name="resta" id="resta" style="margin-right: 5px;"/> Resta<br>
+    <input type="radio" name="multiplicacion" id="multiplicacion" style="margin-right: 5px;"/> Multiplicación<br>
+    <input type="radio" name="division" id="division" style="margin-right: 5px;"/> División <br><br>
+    <input type = "submit" style="margin-right: 15px;"/><input type="reset"/>
+</form>
+{% endblock %}
