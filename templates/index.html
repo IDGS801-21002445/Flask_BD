@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+<!-- {% extends "layout.html" %}
 
 {% block content %}
 <h1> Operaciones Básicas </h1>
@@ -13,4 +13,29 @@
     <input type="radio" name="division" id="division" style="margin-right: 5px;"/> División <br><br>
     <input type = "submit" style="margin-right: 15px;"/><input type="reset"/>
 </form>
-{% endblock %}
+{% endblock %} -->
+{% extends 'layout.html'%}
+{% block content %}
+
+{% from '_macros.html' import camposNuevos%}
+<div class="container">
+<div class="now">
+    <form action="sent" action="/index" id="contactForm" method="POST">
+        <div class="row control-group">
+            <div class="form-group col-xs-12 float-label-form-group controls">
+                {{camposNuevos(form.apaterno,class='form-control')}}
+
+            </div>
+
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 float-label-form-group controls">
+                {{camposNuevos(form.email,class='form-control')}}
+            </div>
+        </div>
+        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+        <input type="submit" id="send-singup" name="singup" value="Registro">
+    </form>
+</div>
+</div>
+{% endblock %} 
