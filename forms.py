@@ -34,8 +34,7 @@ class UserForm(Form):
     amaterno = StringField('amamterno',[validators.DataRequired(message='El campo es requerido'),
                                     validators.length(min=4,max=10,message='Ingresa un apellido válido')])
     
-    edad = IntegerField('edad',[validators.DataRequired(message='El campo es requerido'),
-                                    validators.length(min=4,max=10,message='Ingresa un edad válido')]) 
+    edad = IntegerField('edad',[validators.DataRequired(message='El campo es requerido')]) 
     
 class distanciasForm(Form):
     x1 = IntegerField("x1")

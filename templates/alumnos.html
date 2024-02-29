@@ -2,6 +2,7 @@
 
 {% block conteiner %}
 {% import "_macros.html" as macros %}
+
     <h1>Hola desde Alumnos !!</h1>
     <title>Alumnos</title>
     <form action="" method="POST" novalidate>
@@ -31,7 +32,7 @@
                 {{macros.camposNuevos(form.edad,class="form-control")}}
             </div>
         </div>
-
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
         <input type="submit" id="btn1" value="Registrar">
     </form>
     <h1>Nombre:{{nom}}</h1>
