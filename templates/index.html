@@ -3,7 +3,7 @@
 
 {% from '_macros.html' import camposNuevos%}
 <div class="container">
-<div class="now">
+<div class="row">
     <form action="sent" action="/index" id="contactForm" method="POST">
         <div class="row control-group">
             <div class="form-group col-xs-12 float-label-form-group controls">
@@ -17,7 +17,7 @@
         </div>
         <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
         <input type="submit" id="send-singup" name="singup" value="Registro">
-    </form>
+    </form>cdcdecd
 </div>
 </div>
 {% endblock %} 

@@ -35,6 +35,10 @@
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
         <input type="submit" id="btn1" value="Registrar">
     </form>
+
+    {% import "ABC_Completo.html" as macros %}
+    
+
     <h1>Nombre:{{nom}}</h1>
     <h1>Apellido Paterno:{{apa}}</h1>
     <h1>Apellido Materno:{{ama}}</h1>
